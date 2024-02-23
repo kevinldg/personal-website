@@ -4,7 +4,7 @@ export default function IntroductionText() {
       <h2 className="text-5xl font-bold leading-tight">
         Hey,
         <br />
-        i'm
+        i&apos;m{" "}
         <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text text-shadow-white">
           Kevin!
         </span>
