@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <title>Next.js App</title>
       </Head>
-      <body>
+      <body className="bg-dark-200 text-white">
         <Main />
         <NextScript />
       </body>
