@@ -11,8 +11,8 @@ const inter = Inter({
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Header className={`${inter.variable} font-sans`} />
-      <main className={`${inter.variable} font-sans`}>
+      <Header />
+      <main>
         <Component {...pageProps} />
       </main>
       <Footer />

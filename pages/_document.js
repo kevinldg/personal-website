@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Next.js App</title>
+        <title>Kevin Loeding</title>
       </Head>
       <body className="bg-dark-200 text-white">
         <Main />
