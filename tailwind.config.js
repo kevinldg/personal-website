@@ -5,6 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      mobile: "425px",
+      tablet: "700px",
+      desktop: "1280px",
+    },
     extend: {
       colors: {
         "dark-100": "rgba(15,15,15,1)",
