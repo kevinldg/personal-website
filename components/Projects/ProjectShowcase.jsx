@@ -2,28 +2,34 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowsLeftRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import ProjectSkill from "./ProjectSkill";
+import Link from "next/link";
 
-export default function ProjectShowcase() {
+export default function ProjectShowcase({
+  title,
+  techStack,
+  websiteLink,
+  repositoryLink,
+  image,
+}) {
   return (
-    <div className="bg-dark-200 p-4 rounded w-fit flex flex-col gap-4">
+    <div className="bg-dark-200 shadow-lg p-4 rounded w-full flex flex-col gap-4">
       <Image
-        src={"/project-example.jpg"}
+        src={`/${image}`}
         alt="Project Screenshot"
-        width={400}
-        height={150}
-        className="rounded"
+        width={1280}
+        height={720}
+        className="rounded self-center w-auto max-h-96"
       />
-      <h4 className="font-bold">Project Title</h4>
-      <div className="flex flex-wrap gap-3 pb-8">
-        <ProjectSkill />
-        <ProjectSkill />
-        <ProjectSkill />
-        <ProjectSkill />
+      <h4 className="font-bold self-center">{title}</h4>
+      <div className="flex flex-wrap gap-3 pb-8 justify-center">
+        {techStack.map((skill, index) => (
+          <ProjectSkill key={index} skill={skill} />
+        ))}
       </div>
       <div className="flex justify-between items-center">
-        <p>Website</p>
+        <Link href={websiteLink}>Website</Link>
         <FontAwesomeIcon icon={faArrowsLeftRight} />
-        <p>Repository</p>
+        <Link href={repositoryLink}>Repository</Link>
       </div>
     </div>
   );

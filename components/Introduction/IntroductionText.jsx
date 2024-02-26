@@ -10,9 +10,11 @@ export default function IntroductionText() {
         </span>
       </h2>
       <p>
-        Lorem ipsum, dolor sit amet. Lorem ipsum, dolor sit amet. <br />
-        Lorem ipsum, dolor sit amet. Lorem ipsum, dolor sit amet. <br />
-        Lorem ipsum, dolor sit amet.
+        A 21 years old computer science expert and junior web developer from
+        Germany. I have a passion for React and Next.js{" "}
+        <span className="[text-shadow:_0_0px_0.5rem_rgb(255_0_0_/_100%)]">
+          ❤️
+        </span>
       </p>
     </>
   );

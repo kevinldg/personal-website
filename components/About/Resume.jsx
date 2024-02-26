@@ -1,17 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function Resume() {
+export default function Resume({ icon, title, date, content }) {
   return (
     <div className="flex gap-4">
-      <FontAwesomeIcon icon={faAnglesRight} />
-      <div className="flex flex-col gap-1">
-        <h3 className="font-bold">Lorem ipsum</h3>
-        <p>
-          Lorem ipsum, dolor sit amet. Lorem ipsum, dolor sit amet. <br />
-          Lorem ipsum, dolor sit amet. Lorem ipsum, dolor sit amet. <br />
-          Lorem ipsum, dolor sit amet.
-        </p>
+      <FontAwesomeIcon icon={icon} />
+      <div className="flex flex-col gap-4">
+        <div>
+          <h3 className="font-bold">{title}</h3>
+          <p className=" font-bold">({date})</p>
+        </div>
+        <p>{content}</p>
       </div>
     </div>
   );
