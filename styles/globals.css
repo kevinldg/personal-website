@@ -20,3 +20,7 @@ a {
 .text-shadow-white {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.125);
 }
+
+.theme-transition {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
