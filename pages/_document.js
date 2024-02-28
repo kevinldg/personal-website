@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <title>Kevin Loeding</title>
       </Head>
-      <body className="bg-dark-200 text-white">
+      <body className="text-white">
         <Main />
         <NextScript />
       </body>
