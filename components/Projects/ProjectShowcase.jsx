@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import ThemeContext from "@/contexts/ThemeContext";
+
+import Image from "next/image";
+import Link from "next/link";
+
+import ProjectSkill from "./ProjectSkill";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowsLeftRight } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
-import ProjectSkill from "./ProjectSkill";
-import Link from "next/link";
 
 export default function ProjectShowcase({
   title,
@@ -11,8 +15,16 @@ export default function ProjectShowcase({
   repositoryLink,
   image,
 }) {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="bg-dark-200 shadow-lg p-4 rounded w-full flex flex-col gap-4">
+    <div
+      className={
+        (theme === "dark" ? "bg-dark-200 " : "bg-light-200 ") +
+        (theme === "dark" ? "text-white " : "text-black ") +
+        "shadow-lg p-4 rounded w-full flex flex-col gap-4 theme-transition"
+      }
+    >
       <Image
         src={`/${image}`}
         alt="Project Screenshot"

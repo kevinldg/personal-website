@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import ThemeContext from "@/contexts/ThemeContext";
+
 import Resume from "./Resume";
 import {
   faGraduationCap,
@@ -27,8 +30,16 @@ const entries = [
 ];
 
 export default function About() {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="desktop:px-[25vw] px-8 py-8 bg-dark-300 flex flex-col gap-4">
+    <div
+      className={
+        (theme === "dark" ? "bg-dark-300 " : "bg-light-300 ") +
+        (theme === "dark" ? "text-white " : "text-black ") +
+        "desktop:px-[25vw] px-8 py-8 flex flex-col gap-4 theme-transition"
+      }
+    >
       <h3 className="text-2xl font-bold">About me</h3>
       {entries.map((entry, index) => (
         <Resume key={index} {...entry} />
